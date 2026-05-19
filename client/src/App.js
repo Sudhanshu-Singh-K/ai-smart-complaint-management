@@ -50,7 +50,7 @@ setSearchLocation] = useState("");
 
       await axios.post(
 
-        "http://localhost:5000/api/complaints",
+        "https://complaint-backend-sl2k.onrender.com/api/complaints",
 
         complaint
 
@@ -78,7 +78,7 @@ setSearchLocation] = useState("");
       const response =
         await axios.get(
 
-          "http://localhost:5000/api/complaints"
+          "https://complaint-backend-sl2k.onrender.com/api/complaints"
         );
 
       setComplaints(response.data);
@@ -101,7 +101,7 @@ setSearchLocation] = useState("");
       const response =
         await axios.post(
 
-          "http://localhost:5000/api/ai/analyze",
+          "https://complaint-backend-sl2k.onrender.com/api/ai/analyze",
 
           complaint
 
@@ -134,7 +134,7 @@ const updateStatus = async (id) => {
 
     await axios.put(
 
-      `http://localhost:5000/api/complaints/${id}`,
+      `https://complaint-backend-sl2k.onrender.com/api/complaints/${id}`,
 
       {
         status: "Resolved"
@@ -160,7 +160,7 @@ async () => {
     const response =
       await axios.get(
 
-`http://localhost:5000/api/complaints/search?location=${searchLocation}`
+`https://complaint-backend-sl2k.onrender.com/api/complaints/search?location=${searchLocation}`
 
       );
 
